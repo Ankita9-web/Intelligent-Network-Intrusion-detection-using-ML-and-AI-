@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="col-lg-7">
+    <div class="p-5">
+        <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Enter URL To Test</h1>
+        </div>
+        <form class="user" action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" class="form-control form-control-user"
+                    id="exampleInputEmail" aria-describedby="emailHelp" name="url"
+                    placeholder="Enter URL to Test..." value="{{ url }}">
+            </div>
+            
+
+            <input  name="prediction" type="submit" value="Predict" class="btn btn-primary btn-user btn-block">
+            <hr>
+            <div class="text-center">
+                {{ url_r }}
+            </div>
+        </form>
+        <hr>
+
+    </div>
+</div>
+
+{% endblock %}

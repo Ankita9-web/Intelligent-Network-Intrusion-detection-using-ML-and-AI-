@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="col-lg-7">
+    <div class="p-5">
+        <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Enter Script To Test</h1>
+        </div>
+        <form class="user" action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="comment">Script</label>
+                <textarea class="form-control" rows="5" id="comment" name='script' value="{{ script }}"></textarea>
+            </div>
+            
+
+            <input  name="prediction" type="submit" value="Predict" class="btn btn-primary btn-user btn-block">
+            <hr>
+            <div class="text-center">
+                {{ xss_r }}
+            </div>
+        </form>
+        <hr>
+
+    </div>
+</div>
+
+{% endblock %}
